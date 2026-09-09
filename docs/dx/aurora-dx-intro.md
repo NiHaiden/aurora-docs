@@ -142,9 +142,9 @@ The JetBrains blog also has more information on JetBrains Dev Containers support
 
 For access to the full suite of [Cloud Native Computing Foundation](https://l.cncf.io) tools, use `ujust cncf` to browse and install from an extensive collection of 89 CNCF projects including graduated, incubating, and sandbox tools. This includes Argo, Cilium, Envoy, Flux, Istio, Linkerd, Prometheus, and many more.
 
-## Ramalama and other AI tools
+## Ramalama, llmman and other AI tools
 
-[Ramalama](https://github.com/containers/ramalama) can be installed via `ujust bbrew` and selecting the `ai` option for local management and serving of AI models. Check the [AI documentation](/guides/local-ai) for more information.
+[Ramalama](https://github.com/containers/ramalama) and [llmman](https://github.com/llmmanorg/llmman) can be installed via `ujust bbrew` and selecting the `ai` option for local management and serving of AI models. Check the [AI documentation](/guides/local-ai) for more information.
 
 ## Virtualization and Container Runtimes
 
