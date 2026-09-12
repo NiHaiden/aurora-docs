@@ -18,6 +18,7 @@ The following AI-focused command-line tools are available via homebrew, install 
 | [codex](https://formulae.brew.sh/cask/codex)                        | Code editor for OpenAI's coding agent that runs in your terminal |
 | [copilot-cli](https://formulae.brew.sh/cask/copilot-cli)            | GitHub Copilot CLI for terminal assistance                       |
 | [llm](https://formulae.brew.sh/formula/llm)                         | Access large language models from the command line               |
+| [llmman](https://github.com/llmmanorg/llmman)                       | Run any agent on any model, local or hosted                      |
 | [lm-studio](https://lmstudio.ai/)                                   | Desktop app for running local LLMs                               |
 | [opencode](https://formulae.brew.sh/formula/opencode)               | AI coding agent for the terminal                                 |
 | [ramalama](https://formulae.brew.sh/formula/ramalama)               | Manage and run AI models locally with containers                 |
@@ -57,6 +58,24 @@ quay.io/ramalama/rocm                      latest      8875feffdb87  5 days ago 
 
 ![Newelle](https://github.com/user-attachments/assets/af508f58-e696-4eba-956b-ad3dea19d315)
 )
+
+## llmman
+
+Install [llmman](https://github.com/llmmanorg/llmman) via `brew install llmmanorg/tap/llmman`. It runs coding agents (Claude Code, Codex, OpenCode and friends) against a model on your own machine or any hosted provider in one command. Models are pulled directly from Hugging Face or any OCI registry (Docker Hub, GHCR, quay) and stored as standard OCI image layouts; inference uses upstream `llama.cpp`, `vllm` or `mlx-lm`.
+
+```
+llmman launch claude --model qwen3.8   # an agent on a local model
+llmman run qwen3.8                     # just chat with a model
+llmman run hf.co/unsloth/Qwen3.5-0.8B-GGUF
+```
+
+You can also serve models locally, exposing an Ollama, OpenAI and Anthropic compatible endpoint:
+
+```
+llmman serve
+```
+
+Check the [llmman documentation](https://github.com/llmmanorg/llmman#readme) for hosted providers, multi-machine aggregation and registry-to-registry transfer.
 
 ## Alpaca
 
